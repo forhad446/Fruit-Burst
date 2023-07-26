@@ -17,6 +17,18 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        module.exports = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'banner': "url('./images/banner1.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         .text-lato {
             font-family: 'Lato', sans-serif;
@@ -58,6 +70,21 @@
                         <li><a>About Us</a></li>
                         <li><a>Shop</a></li>
                         <li><a>All Fruits</a></li>
+                        <li>
+                            <div class="relative">
+                                <input type="text" placeholder="Search here"
+                                    class="input text-[#000] input-bordered w-[180px] input-info rounded-[50px]" />
+                                <span class="absolute right-5 top-4 bottom-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21 21L15.803 15.803M15.803 15.803C17.2096 14.3965 17.9998 12.4887 17.9998 10.4995C17.9998 8.51035 17.2096 6.60262 15.803 5.19605C14.3964 3.78947 12.4887 2.99927 10.4995 2.99927C8.51029 2.99927 6.60256 3.78947 5.19599 5.19605C3.78941 6.60262 2.99921 8.51035 2.99921 10.4995C2.99921 12.4887 3.78941 14.3965 5.19599 15.803C6.60256 17.2096 8.51029 17.9998 10.4995 17.9998C12.4887 17.9998 14.3964 17.2096 15.803 15.803Z"
+                                            stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="hidden lg:flex relative">
@@ -74,8 +101,8 @@
             </div>
         </div>
         <!-- slider start -->
-        <div class="carousel px-5 lg:px-0 mt-10 min-h-[calc(100vh-230px)]">
-            <div id="slide1" class=" carousel-item relative w-full rounded-lg">
+        <div class="carousel px-5 lg:px-0 mt-10 min-h-[calc(100vh-230px)] hidden lg:flex">
+            <div id="slide1" class=" carousel-item relative lg:w-full rounded-lg">
                 <div class="hero " style="background-image: url(./images/banner1.png);">
                     <div class="hero-overlay bg-opacity-50 "></div>
                     <div class="hero-content text-center text-neutral-content">
@@ -149,7 +176,90 @@
             </div>
         </div>
     </header>
-    <main class="max-w-screen-xl mx-auto mt-10">
+    <main class="max-w-screen-xl mx-auto mt-16">
+        <!-- Deal of the day section -->
+        <section class="">
+            <div class="flex flex-col lg:flex-row justify-between items-center mx-7 lg:mx-0 my-12 text-center lg:text-left">
+                <div >
+                    <h1 class="text-5xl font-extrabold mb-6">Deal of the day</h1>
+                    <p class="font-medium text-[#12121299]">Contrary to popular belief, is not simply random text. It
+                        has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years
+                        old.</p>
+                </div>
+                <div>
+                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                        <div class="flex flex-col">
+                            <span class="countdown text-5xl font-extrabold text-[#12121299]">
+                                <span style="--value:29 ;"></span> :
+                            </span>
+                            <span class="font-medium text-[#12121299]">Days</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown text-5xl font-extrabold text-[#12121299]">
+                                <span style="--value:15 ;"></span> :
+                            </span>
+                            <span class="font-medium text-[#12121299]">Hours</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown text-5xl font-extrabold text-[#12121299]">
+                                <span style="--value:25 ;"></span> :
+                            </span>
+                            <span class="font-medium text-[#12121299]">Minutes</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown text-5xl font-extrabold text-[#12121299]">
+                                <span style="--value:08 ;"></span>
+                            </span>
+                            <span class="font-medium text-[#12121299]">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Deal of the day items -->
+            <div class="flex flex-col lg:flex-row gap-6 mx-5 lg:mx-0">
+                <!-- card number 1 -->
+                <div class="card max-h-[500px] bg-[#FFF] text-center px-9 py-10 border-solid border-[1px] border-[#12121299] rounded-lg">
+                    <figure><img class="w-28 max-h-28" src="./images/fruit6.png" alt="fruit" /></figure>
+                    <div class="card-body">
+                        <h1 class="mt-8  text-[#121212] text-xl font-bold">12.90$ - 18.85$</h1>
+                        <h1 class="mt-5 text-[#12121299] font-medium">Apples</h1>
+                        <div class="flex justify-center"><img src="./images/icons/Group 24.svg" alt=""></div>
+                        <h1 class="text-[#F85559] font-bold mt-7">Details</h1>
+                    </div>
+                </div>
+                <!-- card number 2 -->
+                <div class="card max-h-[500px] bg-[#FFF] text-center px-9 py-10 border-solid border-[1px] border-[#12121299] rounded-lg">
+                    <figure><img class="w-28 max-h-28" src="./images/fruit7.png" alt="fruit" /></figure>
+                    <div class="card-body">
+                        <h1 class="mt-8  text-[#121212] text-xl font-bold">12.90$ - 18.85$</h1>
+                        <h1 class="mt-5 text-[#12121299] font-medium">Orange</h1>
+                        <div class="flex justify-center"><img src="./images/icons/Group 24.svg" alt=""></div>
+                        <h1 class="text-[#F85559] font-bold mt-7">Details</h1>
+                    </div>
+                </div>
+                <!-- card number 3 -->
+                <div class="card max-h-[500px] bg-[#FFF] text-center px-9 py-10 border-solid border-[1px] border-[#12121299] rounded-lg">
+                    <figure><img class="w-28 max-h-28" src="./images/fruit8.png" alt="fruit" /></figure>
+                    <div class="card-body">
+                        <h1 class="mt-8  text-[#121212] text-xl font-bold">12.90$ - 18.85$</h1>
+                        <h1 class="mt-5 text-[#12121299] font-medium">Red Dragon</h1>
+                        <div class="flex justify-center"><img src="./images/icons/Group 24.svg" alt=""></div>
+                        <h1 class="text-[#F85559] font-bold mt-7">Details</h1>
+                    </div>
+                </div>
+                <!-- card number 4 -->
+                <div class="card max-h-[500px] bg-[#FFF] text-center px-9 py-10 border-solid border-[1px] border-[#12121299] rounded-lg">
+                    <figure><img class="w-28 max-h-28" src="./images/fruit9.png" alt="fruit" /></figure>
+                    <div class="card-body">
+                        <h1 class="mt-8  text-[#121212] text-xl font-bold">12.90$ - 18.85$</h1>
+                        <h1 class="mt-5 text-[#12121299] font-medium">Banana</h1>
+                        <div class="flex justify-center"><img src="./images/icons/Group 24.svg" alt=""></div>
+                        <h1 class="text-[#F85559] font-bold mt-7">Details</h1>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
 
 
     </main>
